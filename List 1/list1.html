@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="cryptocurrency.ico" type="image/x-icon" />
+  <title>WTLS Export – List 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #121212;
+      color: #f3eac2;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      padding: 2rem;
+      user-select: none;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #a462d6;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 8px #a462d6cc;
+    }
+    header nav {
+      margin-top: 1rem;
+    }
+    header nav a {
+      color: #a462d6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #f3eac2;
+      transition: width 0.3s ease, left 0.3s ease;
+      border-radius: 1px;
+    }
+    header nav a:hover {
+      color: #f3eac2;
+    }
+    header nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    main.vehicle-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .vehicle {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 260px;
+      box-shadow: 0 0 8px #a462d633;
+      text-align: center;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    .vehicle h2 {
+      color: #a462d6;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .vehicle img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      user-select: none;
+      pointer-events: none;
+    }
+    .vehicle:hover {
+      background: #a462d622;
+      box-shadow: 0 0 20px #f3eacccc;
+      transform: translateY(-6px);
+    }
+    @media (max-width: 480px) {
+      main.vehicle-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .vehicle {
+        width: 90vw;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WTLS Export – List 1</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="list1.html">List 1</a>
+      <a href="../List 2/list2.html">List 2</a>
+      <a href="../List 3/list3.html">List 3</a>
+    </nav>
+  </header>
+
+  <main class="vehicle-grid">
+    <div class="vehicle">
+      <h2>Admiral</h2>
+      <img src="admiral.png" alt="Admiral car image" />
+      <img src="admiral-map.png" alt="Admiral spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Buffalo</h2>
+      <img src="buffalo.png" alt="Buffalo car image" />
+      <img src="buffalo-map.png" alt="Buffalo spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Camper</h2>
+      <img src="camper.png" alt="Camper car image" />
+      <img src="camper-map.png" alt="Camper spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Feltzer</h2>
+      <img src="feltzer.png" alt="Feltzer car image" />
+      <img src="feltzer-map.png" alt="Feltzer spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Infernus</h2>
+      <img src="infernus.png" alt="Infernus car image" />
+      <img src="infernus-map.png" alt="Infernus spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Patriot</h2>
+      <img src="patriot.png" alt="Patriot car image" />
+      <img src="patriot-map.png" alt="Patriot spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Sanchez</h2>
+      <img src="sanchez.png" alt="Sanchez car image" />
+      <img src="sanchez-map.png" alt="Sanchez spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Sentinel</h2>
+      <img src="sentinel.png" alt="Sentinel car image" />
+      <img src="sentinel-map.png" alt="Sentinel spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Stretch</h2>
+      <img src="stretch.png" alt="Stretch car image" />
+      <img src="stretch-map.png" alt="Stretch spawn map location" />
+    </div>
+  </main>
+ 
+ 
+ <script>
+  // Get modal elements
+  const modal = document.getElementById('mapModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = modal.querySelector('.close');
+
+  // Attach click event to all map images
+  document.querySelectorAll('img[src$="-map.png"]').forEach(img => {
+    img.style.cursor = 'zoom-in'; // show zoom cursor on hover
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    });
+  });
+
+  // Close modal on close button click
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  // Close modal if clicking outside the image (on overlay)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Optional: close modal on ESC key press
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+ 
+</body>
+</html>
