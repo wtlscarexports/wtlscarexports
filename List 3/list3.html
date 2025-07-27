@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="cryptocurrency.ico" type="image/x-icon" />
+  <title>WTLS Export – List 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+  /* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #a462d6cc;
+  user-select: none;
+}
+
+.close {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  color: #f3eac2;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  z-index: 1100;
+}
+
+.close:hover {
+  color: #a462d6;
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #121212;
+      color: #f3eac2;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      padding: 2rem;
+      user-select: none;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #a462d6;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 8px #a462d6cc;
+    }
+    header nav {
+      margin-top: 1rem;
+    }
+    header nav a {
+      color: #a462d6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #f3eac2;
+      transition: width 0.3s ease, left 0.3s ease;
+      border-radius: 1px;
+    }
+    header nav a:hover {
+      color: #f3eac2;
+    }
+    header nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    main.vehicle-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .vehicle {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 260px;
+      box-shadow: 0 0 8px #a462d633;
+      text-align: center;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    .vehicle h2 {
+      color: #a462d6;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    .vehicle img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      user-select: none;
+      pointer-events: none;
+    }
+    .vehicle:hover {
+      background: #a462d622;
+      box-shadow: 0 0 20px #f3eacccc;
+      transform: translateY(-6px);
+    }
+    @media (max-width: 480px) {
+      main.vehicle-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .vehicle {
+        width: 90vw;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WTLS Export – List 3</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../List 1/list1.html">List 1</a>
+      <a href="../List 2/list2.html">List 2</a>
+      <a href="list3.html">List 3</a>
+    </nav>
+  </header>
+
+  <main class="vehicle-grid">
+    <div class="vehicle">
+      <h2>Banshee</h2>
+      <img src="banshee.png" alt="Banshee car image" />
+      <img src="banshee-map.png" alt="Banshee spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Bfinjection</h2>
+      <img src="bfinjection.png" alt="Bfinjection car image" />
+      <img src="bfinjection-map.png" alt="Bfinjection spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Blade</h2>
+      <img src="blade.png" alt="Blade car image" />
+      <img src="blade-map.png" alt="Blade spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Euros</h2>
+      <img src="euros.png" alt="Euros car image" />
+      <img src="euros-map.png" alt="Euros spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Freeway</h2>
+      <img src="freeway.png" alt="Freeway car image" />
+      <img src="freeway-map.png" alt="Freeway spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Journey</h2>
+      <img src="journey.png" alt="Journey car image" />
+      <img src="journey-map.png" alt="Journey spawn map location" />
+    </div>
+    <div class="vehicle">
+      <h2>Zr350</h2>
+      <img src="zr350.png" alt="Zr350 car image" />
+      <img src="zr350-map.png" alt="Zr350 spawn map location" />
+    </div>
+  </main>
+  
+   <!-- Modal for Map Image -->
+<div id="mapModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage" alt="Expanded map image" />
+</div>
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById('mapModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = modal.querySelector('.close');
+
+  // Attach click event to all map images
+  document.querySelectorAll('img[src$="-map.png"]').forEach(img => {
+    img.style.cursor = 'zoom-in'; // show zoom cursor on hover
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    });
+  });
+
+  // Close modal on close button click
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  // Close modal if clicking outside the image (on overlay)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Optional: close modal on ESC key press
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+  
+</body>
+</html>
