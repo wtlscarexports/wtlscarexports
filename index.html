@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="cryptocurrency.ico" type="image/x-icon" />
+  <title>WTLS Export Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #121212;
+      color: #f3eac2; /* light yellow */
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      user-select: none;
+    }
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #a462d6; /* purple */
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 8px #a462d6cc;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #dcd1a4; /* lighter yellow */
+    }
+
+    main {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    a.vehicle {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
+      flex: 1 1 180px;
+      max-width: 220px;
+      text-decoration: none;
+      color: #a462d6; /* purple */
+      box-shadow: 0 0 8px #a462d633;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-align: center;
+      letter-spacing: 1px;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+    a.vehicle::after {
+      content: "→";
+      position: absolute;
+      right: 16px;
+      font-size: 1.3rem;
+      color: #a462d6;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    a.vehicle:hover {
+      background: #a462d622; /* subtle purple overlay */
+      box-shadow: 0 0 20px #f3eacccc; /* light yellow glow */
+      color: #f3eac2; /* text changes to light yellow */
+      transform: translateY(-6px);
+    }
+    a.vehicle:hover::after {
+      opacity: 1;
+      color: #f3eac2;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        flex-direction: column;
+        max-width: 320px;
+      }
+      a.vehicle {
+        max-width: 100%;
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WTLS Export Hub</h1>
+    <p>Select a list below to view vehicles and map locations</p>
+  </header>
+
+  <main>
+    <a class="vehicle" href="List 1/list1.html" aria-label="Go to List 1">List 1</a>
+    <a class="vehicle" href="List 2/list2.html" aria-label="Go to List 2">List 2</a>
+    <a class="vehicle" href="List 3/list3.html" aria-label="Go to List 3">List 3</a>
+  </main>
+<br>
+<br>
+<img src="full-2418.jpg">
+</body>
+</html>
